@@ -1,0 +1,16 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "main": "Calculator.html",
+  "dependencies": {
+    "mathjs": "^11.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "Calculator.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
