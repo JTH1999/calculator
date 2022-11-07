@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="calculator_stylesheet.css">
+  </head>
+  <body>
+    <container class="main ">
+      <div class="d-flex justify-content-center">
+        <div class="calculator">
+          <div class="screen p-5 pb-3">
+            <div id="previous">
+
+            </div>
+            <div id="current">
+            </div>
+          </div>
+        <div class="calc-body p-5">
+          <div class="d-flex justify-content-between mb-4">
+            <div class="calc-btn thingy" id="clear">C</div>
+            <div class="calc-btn thingy" id="delete">DEL</div>
+            <div class="calc-btn thingy" id="negative">+/-</div>
+            <div class="calc-btn operator expression" id="/">/</div>
+          </div>
+          <div class="d-flex justify-content-between mb-4">
+            <div class="calc-btn expression" id="7">7</div>
+            <div class="calc-btn expression" id="8">8</div>
+            <div class="calc-btn expression" id="9">9</div>
+            <div class="calc-btn operator expression" id="*">*</div>
+          </div>
+          <div class="d-flex justify-content-between mb-4">
+            <div class="calc-btn expression" id="4">4</div>
+            <div class="calc-btn expression" id="5">5</div>
+            <div class="calc-btn expression" id="6">6</div>
+            <div class="calc-btn operator expression" id="-">-</div>
+          </div>
+          <div class="d-flex justify-content-between mb-4">
+            <div class="calc-btn expression" id="1">1</div>
+            <div class="calc-btn expression" id="2">2</div>
+            <div class="calc-btn expression" id="3">3</div>
+            <div class="calc-btn operator expression" id="+">+</div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="calc-btn expression" id="0">0</div>
+            <div class="calc-btn" id="?">?</div>
+            <div class="calc-btn expression" id="dot">.</div>
+            <div class="calc-btn" id="equals">=</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+        
+        
+    </container>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script type="module" src="calculator.js"></script>
+  </body>
+</html>
