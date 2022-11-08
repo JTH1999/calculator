@@ -4,26 +4,52 @@
     --equals-button-colour: #2DD3C5;
     --operator-button-colour: #745FF2;
     --thingy-button-colour: #898989;
+    --background-colour-dark: #303234;
+    --light-box-shadow-calculator: -10px -10px 40px 0px rgba(255, 255, 255, 1), 10px 10px 30px 0px rgba(174, 174, 192, 0.4);
+    --light-box-shadow-button: -10px -10px 24px 0px rgba(255, 255, 255, 0.6), 10px 10px 24px 0px rgba(174, 174, 192, 0.2);
+    --light-box-shadow-equals: -10px -10px 24px 0px rgba(255, 255, 255, 1), 10px 10px 24px 0px rgba(174, 174, 192, 0.35);
+    --dark-box-shadow-calculator: -10px -10px 40px 0px rgba(73, 73, 73, 0.45), 10px 10px 30px 0px rgba(0, 0, 0, 0.4);
+    --dark-box-shadow-button: -10px -10px 24px 0px rgba(73, 73, 73, 0.45), 10px 10px 24px 0px rgba(0, 0, 0, 0.4);
+    --dar-box-shadow-equals: -10px -10px 24px 0px rgba(73, 73, 73, 0.45), 10px 10px 24px 0px rgba(0, 0, 0, 0.4);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 body {
-    margin: 200px 200px 200px 200px;
+    margin: 100px 200px 200px 200px;
     background-color: var(--background-colour);
     font-weight: bold;
+    transition: 1.5s;
+}
+
+body.dark {
+    background-color: var(--background-colour-dark);
+    transition: 1.5s;
 }
 
 .calculator {
     width: 400px;
     min-height: 500px;
     background-color: var(--background-colour);
-    box-shadow: -10px -10px 40px 0px rgba(255, 255, 255, 1), 10px 10px 30px 0px rgba(174, 174, 192, 0.4);
+    box-shadow: var(--light-box-shadow-calculator);
     border-radius: 16px;
+    transition: 1.5s;
+}
+
+.calculator.dark {
+    background-color: var(--background-colour-dark);
+    box-shadow: var(--dark-box-shadow-calculator);
+    transition: 1.5s;
 }
 
 .calc-body {
     background-color: var(--background-colour);
     border-radius: 0px 0px 16px 16px;
+    transition: 1.5s;
+}
+
+.calc-body.dark {
+    background-color: var(--background-colour-dark);
+    transition: 1.5s;
 }
 
 .screen {
@@ -46,12 +72,19 @@ body {
     align-content: center;
     flex-direction: column;
     background-color: var(--background-colour);
-    box-shadow: -10px -10px 24px 0px rgba(255, 255, 255, 0.6), 10px 10px 24px 0px rgba(174, 174, 192, 0.2);
+    box-shadow: var(--light-box-shadow-button);
     border-radius: 16px;
     font-size: 28px;
     color: var(--button-text-numbers);
     cursor: pointer;
+    transition: 1.5s;
 
+}
+
+.calc-btn.dark {
+    background-color: var(--background-colour-dark);
+    box-shadow: var(--dark-box-shadow-button);
+    transition: 1.5s;
 }
 
 .calc-btn.operator {
@@ -65,7 +98,14 @@ body {
 #equals {
     background-color: var(--equals-button-colour);
     color: white;
-    box-shadow: -10px -10px 24px 0px rgba(255, 255, 255, 1), 10px 10px 24px 0px rgba(174, 174, 192, 0.35);
+    box-shadow: var(--light-box-shadow-equals);
+}
+
+#equals.dark {
+    box-shadow: var(--dark-box-shadow-button);
+    background-color: var(--background-colour-dark);
+    color: var(--equals-button-colour)
+
 }
 
 #current {
@@ -84,3 +124,72 @@ body {
     color: var(--button-text-numbers);
     font-size: 28px;
 }
+
+.switch-div {
+    padding-top: 40px;
+    width: 400px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(174, 174, 192, 0.4);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
